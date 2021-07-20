@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@mixin margin {
+  margin-bottom: 200px;
+  position: relative;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}

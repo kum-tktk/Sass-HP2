@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.btn {
+  background: $Black;
+  padding: 20px 30px;
+  text-align: center;
+  width: 17%;
+  margin: auto;
+
+  a {
+    color: $White;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}
