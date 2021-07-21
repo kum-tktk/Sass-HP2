@@ -639,3 +639,440 @@ footer {
   font-size: 20px;
   line-height: 1.8;
 }
+
+.contact {
+
+  &_item {
+    display: flex;
+    position: absolute;
+    width: 50%;
+  }
+
+  &_txt {
+    line-height: 1.8;
+    z-index: 5;
+    font-size: 18px;
+  }
+
+  &_img {
+    background: url(../img/contact.png) no-repeat center;
+    background-size: cover;
+    width: 80%;
+    height: 450px;
+    position: relative;
+    left: 32.5%;
+    z-index: -1;
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      background: $White;
+      position: absolute;
+      width: 380px;
+      height: 760px;
+      z-index: 0;
+      transform: rotate(50deg);
+      left: -9%;
+      top: -280px;
+    }
+  }
+}
+
+.contact {
+
+  &_form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &_box {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  &_form_box1 {
+    height: 51px;
+    width: 69%;
+    padding-left: 6px;
+    font-size: 15px;
+  }
+
+  &_form_box2 {
+    height: 45px;
+    width: 67%;
+    padding-left: 6px;
+    font-size: 15px;
+  }
+}
+
+.contact_box._area {
+  margin-bottom: 0;
+}
+
+.contact_form_ttl {
+  width: 46%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  position: relative;
+  margin-top: 10px;
+
+  &::after {
+    content: "必須";
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 96px;
+    line-height: 32px;
+    font-size: 15px;
+    color: #c72930;
+    border: 1px solid #c72930;
+    border-radius: 2px;
+  }
+}
+
+.contact_textarea {
+  width: 67%;
+  height: 300px;
+  margin-bottom: 100px;
+  font-size: 15px;
+  padding: 7px;
+}
+
+.contact_btn {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto 150px;
+  font-size: 18px;
+  display: block;
+  color: $White;
+  background: $Black;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    color: $Black;
+    background: $White;
+    transition: 0.4s;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  //崩れなし
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 95%;
+  }
+
+  .service_item {
+    display: block;
+    width: 80%;
+    margin: 0 auto 10%;
+    height: 120%;
+
+    &._service2,&._service3,&._service4 {
+      margin: 0 auto 10%;
+      bottom: 0;
+    }
+  }
+
+  .intro {
+  width: 100%;
+
+  &_txt {
+    margin-bottom: 50px;
+  }
+  }
+  
+  .about_sub_ttl {
+    padding-top: 20px;
+  }
+  
+  
+  .about_com_all {
+    padding: 50px;
+  }
+  
+  .about_mem_all {
+    padding: 50px;
+  }
+  
+  .contact {
+    
+    &_img {
+      width: 70%;
+      bottom: 200px;
+      margin-bottom: 0;
+    }
+    &_form_box {
+      width: 320px;
+    }
+  
+    &_txtarea {
+      width: 320px;
+    }
+  
+    &_form_ttl::after {
+      width: 80px;
+      right: 35px;
+    }
+  }
+}
+
+@media screen and (max-width:480px){
+  
+  header {
+    display: block;
+
+    .logo img {
+      
+      position: absolute;
+      left: 20px;
+    }
+
+    .drawer {
+      visibility: visible;
+      border-top: solid 4px $Gray;
+      width: 24px;
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 100;
+
+      &::after,&::before {
+        content: "";
+        background-color: $Gray;
+        width: 24px;
+        height: 4px;
+        position: absolute;
+        display: block;
+        right: 0;
+        transition: all 0.5s;
+      }
+
+      &::after {
+        top: 12px;
+      }
+
+      &::before {
+        top: 4px;
+      }
+    }
+
+    .navbar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      background: $Black;
+
+      ul {
+        display: block;
+        text-align: center;
+        float: none;
+        top: 20%;
+
+        li {
+          width: 40%;
+          margin: 0 auto 20px;
+          padding-right: 0;
+          border-right: none;
+          border-bottom: solid 3px $Blue;
+
+          a {
+            font-size: 20px;
+            line-height: 2;
+          }
+      }
+    }
+  }
+}
+
+  .footer_logo {
+    width: 40%;
+  }
+
+  .footer_list {
+
+    .footer_item {
+      padding-right: 7px;
+      margin-right: 7px;
+    }
+  }
+
+  body.nav-open header .drawer {
+    border-top: 0;
+
+    &::after {
+      top: 12px;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      top: 12px;
+      transform: rotate(45deg);
+    }
+  }
+
+  .top_img img {
+    width: 70%;
+  }
+
+  .service_item {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10%;
+  }
+
+  .service_inner_txt {
+    left: 46%;
+  }
+
+  .about {
+
+    &_list {
+      display: block;
+    }
+
+    &_item {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10%;
+      border: solid 1px $Border;
+    }
+
+    &_sub_ttl {
+      padding-top: 55px;
+    }
+  }
+
+  .news {
+    &_list {
+      display: block;
+    }
+
+    &_item {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10%;
+      border: solid 1px $Border;
+    }
+  }
+
+  .about_com {
+    &_all {
+      display: block;
+    }
+
+    &_list {
+      width: 100%;
+    }
+
+    &_txt {
+      font-size: 16px;
+    }
+  }
+
+  .about_mem {
+    &_all {
+      display: block;
+    }
+
+    &_per {
+      width: 100%;
+      margin: 0 0 20%;
+    }
+
+    &_name {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    &_txt {
+      font-size: 16px;
+    }
+  }
+
+  .about_acc {
+    margin-bottom: 50px;
+
+    &_list {
+      position: relative;
+      margin: 30px 0;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+
+    &_txt {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    &_map {
+      width: unset;
+      height: 350px;
+      margin: 10px;
+      clip-path: none;
+    }
+  }
+
+  .news {
+    &_list {
+      display: block;
+    }
+
+    &_item {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10%;
+      border: solid 1px $Border;
+    }
+  }
+
+  .contact {
+    &_img {
+      background-image: none;
+      height: 0;
+    }
+
+    &_item {
+      width: 100%;
+      display: block;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    &_box {
+      display: block;
+    }
+
+    &_form_ttl::after {
+      position: relative;
+      left: 10px;
+    }
+
+    &_form_box1 {
+      width: 90%;
+      height: 35px;
+    }
+
+    &_form_box2 {
+      width: 90%;
+      height: 35px;
+    }
+
+    &_textarea {
+      width: 90%;
+    } 
+  }
+}
